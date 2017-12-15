@@ -23,6 +23,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.swagger.samples.inflector.springboot.client.SampleServiceClient;
+import io.swagger.samples.inflector.springboot.domain.UserDetails;
 import io.swagger.samples.inflector.springboot.models.Resource;
 
 @RunWith(SpringRunner.class)
@@ -86,11 +87,14 @@ public class StepDefs {
 	}
 
 	@Then("^I'll get the following user details$")
-	public void iLlGetTheFollowingUserDetails(DataTable arg1) throws Throwable {
+	public void iLlGetTheFollowingUserDetails(List<UserDetails> arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		// For automatic transformation, change DataTable to one of
 		// List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 		// E,K,V must be a scalar (String, Integer, Date, enum etc)
+		
+		//resource = client.followLink("http://localhost:8080/api/v2/user");
+		//List<UserDetails> resource.
 		throw new PendingException();
 	}
 
